@@ -12,6 +12,22 @@
     console.log(carBean.toString())
 }
 
+//仅仅作为对比
+{
+    var obj = {
+        a:10,
+        b:20,
+        c:function(){
+            console.log(this.a + this.b)
+        }
+    }
+    obj.c()
+}
+//
+
+
+
+
 //避免toString重复定义，带原型的Constructor
 {
     function Car(model,year,miles){
