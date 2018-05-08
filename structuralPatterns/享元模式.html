@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>享元模式</title>
+</head>
+<body>
+    <div>享元模式，我的理解就是把能公用的给公用起来，不要浪费内存</div>
+    <div>下面这个例子其实就是个事件委托机制，也是享元模式的一种</div>
+    <div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+<script>
+    var ul=document.getElementsByTagName('ul')[0]
+    ul.addEventListener('click',function(ev){
+       
+        var ev = event||window.event;
+        var target = ev.target || ev.srcElement;
+       if(target.nodeName.toLowerCase()=='li'){
+           alert(target.innerHTML)
+       }
+    },false)
+
+    //拓展一下，也可以用闭包来做
+    var liList = document.getElementsByTagName('li')
+    for(var i = 0; i < liList.length; i++){
+        (function(i){
+            liList[i].addEventListener('click',function(){
+                console.log(liList[i].innerHTML)
+            },false)
+        })(i)
+    }
+</script>

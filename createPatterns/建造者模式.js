@@ -36,7 +36,7 @@ function House() {
 }
 
 
-var director = new Director(); // 房主人请 Director 工头来建房子
-var builder = new workerBuilder(); // 工头带来了建造者
-director.construct(builder); // 工头指挥建造者来建房子
-var house = builder.getResult(); // 房主人从建造者那里取得建好的房子
+var director = new Director() // 房主人请 Director 工头来建房子
+var builder = new workerBuilder() // 工头带来了建造者
+director.construct(builder) // 工头指挥建造者来建房子
+var house = builder.getResult() // 房主人从建造者那里取得建好的房子
