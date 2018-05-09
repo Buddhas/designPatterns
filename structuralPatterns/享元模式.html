@@ -29,7 +29,7 @@
 <script>
     var ul=document.getElementsByTagName('ul')[0]
     ul.addEventListener('click',function(ev){
-       
+       console.log(ev)
         var ev = event||window.event;
         var target = ev.target || ev.srcElement;
        if(target.nodeName.toLowerCase()=='li'){
