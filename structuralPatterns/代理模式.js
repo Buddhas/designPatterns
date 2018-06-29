@@ -14,7 +14,7 @@
     }
 
     let proxy = function(girl){
-        this.girl = girl
+       
         this.sendGift = function(gift){
             (new xiaoming(girl).sendGift(gift))
         }
