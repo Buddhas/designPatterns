@@ -1,3 +1,10 @@
+
+
+//就是订阅者订阅发布者发布的消息,但是Observer是订阅者和发布者直接产生依赖关系,
+//当依赖关系变多起来就不好处理了。而Mediator是在订阅者和发布者中间加了一个中介者，
+//由这个中介者去管理不同对象之间的订阅发布关系，
+//这样的好处就是订阅者和发布者不产生直接的依赖关系,统一交给中介者去维护。
+
 var Participant = function(name) {
     this.name = name;
     this.chatroom = null;
@@ -61,3 +68,5 @@ function run() {
 }
 
 run()
+
+

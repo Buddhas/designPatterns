@@ -1,3 +1,10 @@
+
+//什么时候用工厂模式
+
+//对象的构建十分复杂
+//需要依赖具体环境创建不同实例
+//处理大量具有相同属性的小对象
+
 function Car(opt){
     this.doors = opt.doors
     this.state = opt.state
@@ -46,3 +53,4 @@ var truckBean = factory.createVehicle({
     doors:2,
     state:'二手'
 })
+
